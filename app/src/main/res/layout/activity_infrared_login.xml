@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backColor"
+    android:orientation="vertical"
+    tools:context=".InfraredLoginActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_LandingPage_Logo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:background="@color/main_backgroud">
+
+        <ImageView
+            android:background="@drawable/circular_shape"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo"
+             />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="31dp"
+        android:text="用户ID"
+        android:textSize="21sp" />
+
+    <EditText
+        android:id="@+id/et_UserID"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:drawableLeft="@drawable/login_user"
+        android:hint="请输入用户ID"
+        android:imeOptions="actionNext"
+        android:nextFocusForward="@id/et_PassWord"
+        android:singleLine="true"
+        android:text="12345678"
+        android:textColorHint="@color/input_content_color" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="31dp"
+        android:text="密码"
+        android:textSize="21sp" />
+
+    <EditText
+        android:id="@+id/et_PassWord"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:drawableLeft="@drawable/login_password"
+        android:hint="请输入密码"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:nextFocusForward="@id/bt_Landing"
+        android:singleLine="true"
+        android:text="123"
+        android:textColorHint="@color/input_content_color" />
+
+    <Button
+        android:id="@+id/bt_Landing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/bt_shape"
+        android:text="登陆"
+        android:textColor="@color/backColor"
+        android:textSize="20sp" />
+</LinearLayout>

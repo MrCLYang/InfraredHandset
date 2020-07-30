@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".InfraredControllActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="27dp"
+        android:background="@color/main_backgroud">
+
+        <TextView
+            android:id="@+id/tv_bt_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="蓝牙状态"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/tv_infrared_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="9dp"
+            android:text="红外状态"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:background="@color/tow_main_background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/bluetooth_shape"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="A10Key："
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_a10key"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/bluetooth_shape"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="ToKen："
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_token"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/bluetooth_shape"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="表号："
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <EditText
+                android:text="1561909000126117"
+                android:hint="请输入表号"
+                android:background="@null"
+                android:id="@+id/et_Meter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="24dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_infrared_communication_open"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/bt_color"
+                android:text="通信激活"
+                android:textColor="@color/backColor"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="2px"
+                android:layout_height="match_parent"
+                android:background="@color/divider_color" />
+
+            <Button
+                android:id="@+id/bt_infrared_communication_close"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/bt_color"
+                android:text="通信关闭"
+                android:textColor="@color/backColor"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="24dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_infrared_close_valve_LockMeter"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/bt_color"
+                android:text="关阀"
+                android:textColor="@color/backColor"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="2px"
+                android:layout_height="match_parent"
+                android:background="@color/divider_color" />
+
+            <Button
+                android:id="@+id/bt_infrared_close_valve_UnLockMeter"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/bt_color"
+                android:text="关阀不锁表"
+                android:textColor="@color/backColor"
+                android:textSize="18sp" />
+            <View
+                android:layout_width="2px"
+                android:layout_height="match_parent"
+                android:background="@color/divider_color" />
+
+            <Button
+                android:id="@+id/bt_infrared_open_valve"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/bt_color"
+                android:text="开阀"
+                android:textColor="@color/backColor"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backColor"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:text="本地通信激活:"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_infrared_communication_open"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bluetooth_shape"
+                android:text="123456789"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:text="透传前注册上行:"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_Bef_Register_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bluetooth_shape"
+                android:text="123456789"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:text="注册上行:"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_Register_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bluetooth_shape"
+                android:text="123456789"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:text="注册下行:"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_Register_down"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bluetooth_shape"
+                android:text="123456789"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:text="传给表的注册下行:"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_Register_down_toMeter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bluetooth_shape"
+                android:text="123456789"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:text="表概信息上报帧"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_Meter_information_toSystem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bluetooth_shape"
+                android:text="123456789"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:text="关阀不锁表："
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_CloseValveNoLockMeter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bluetooth_shape"
+                android:text="123456789"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:text="开阀解锁："
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_UnLock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bluetooth_shape"
+                android:text="123456789"
+                android:textSize="18sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:text="关阀锁表："
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_CloseValveLockMeter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bluetooth_shape"
+                android:text="123456789"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
